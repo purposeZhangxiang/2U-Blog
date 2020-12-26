@@ -1,0 +1,1 @@
+# 类型type和interface

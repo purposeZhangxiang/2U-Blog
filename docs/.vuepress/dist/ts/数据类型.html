@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据类型 | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.883bf875.css" as="style"><link rel="preload" href="/assets/js/app.6d8e0d61.js" as="script"><link rel="preload" href="/assets/js/2.9662f95a.js" as="script"><link rel="preload" href="/assets/js/18.5f1f8045.js" as="script"><link rel="prefetch" href="/assets/js/10.82b66299.js"><link rel="prefetch" href="/assets/js/11.29466af4.js"><link rel="prefetch" href="/assets/js/12.3d2e4e37.js"><link rel="prefetch" href="/assets/js/13.d3faa0ac.js"><link rel="prefetch" href="/assets/js/14.f253ad90.js"><link rel="prefetch" href="/assets/js/15.83a95a3d.js"><link rel="prefetch" href="/assets/js/16.aafbd8bf.js"><link rel="prefetch" href="/assets/js/17.5de4b03f.js"><link rel="prefetch" href="/assets/js/19.db11e458.js"><link rel="prefetch" href="/assets/js/3.958d2730.js"><link rel="prefetch" href="/assets/js/4.d2c1605d.js"><link rel="prefetch" href="/assets/js/5.6d345a49.js"><link rel="prefetch" href="/assets/js/6.599e3ae0.js"><link rel="prefetch" href="/assets/js/7.bbd72351.js"><link rel="prefetch" href="/assets/js/8.0ea1692a.js"><link rel="prefetch" href="/assets/js/9.86aab131.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.883bf875.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/ts/数据类型.html" class="active sidebar-link">数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ts/数据类型.html#原js中的" class="sidebar-link">原JS中的</a></li><li class="sidebar-sub-header"><a href="/ts/数据类型.html#ts中独有的" class="sidebar-link">TS中独有的</a></li></ul></li><li><a href="/ts/接口.html" class="sidebar-link">接口</a></li><li><a href="/ts/类型type和interface.html" class="sidebar-link">类型type和interface</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="数据类型"><a href="#数据类型" class="header-anchor">#</a> 数据类型</h1> <h2 id="原js中的"><a href="#原js中的" class="header-anchor">#</a> 原JS中的</h2> <ul><li><p>基础类型(6种)</p> <p>string,boolean,number,undefined,null,symbol(ES6)</p></li> <li><p>引用数据</p> <p>object,array,function</p></li></ul> <h2 id="ts中独有的"><a href="#ts中独有的" class="header-anchor">#</a> TS中独有的</h2> <h3 id="_1-枚举"><a href="#_1-枚举" class="header-anchor">#</a> 1.枚举</h3> <div class="language- extra-class"><pre><code>只能是规定集合的某个值。
+
+for exaple: 性别只有男女,在录入该字段仅有男女选择.
+
+enum Sex {Boy,Gril} 
+
+console.log(Sex.Boy)
+</code></pre></div><h3 id="_2-元组tuple"><a href="#_2-元组tuple" class="header-anchor">#</a> 2. 元组Tuple</h3> <div class="language- extra-class"><pre><code>元组类型允许表示一个已知元素数量和类型的数组，各元素的类型不必相同。
+for exaple: 你可以定义一对值分别为 string和number类型的元组
+
+let x: [string, number];
+x = ['hello', 10];
+</code></pre></div><h3 id="_3-any"><a href="#_3-any" class="header-anchor">#</a> 3. Any</h3> <div class="language- extra-class"><pre><code>ts中不标注变量类型其实就是any,完全等同与js的变量.
+
+let noSure: any = 4;
+noSure = &quot;string&quot;;
+noSure = false;
+// any 类型可以随意赋值不同类型的值
+</code></pre></div><h3 id="_4-never"><a href="#_4-never" class="header-anchor">#</a> 4. Never</h3> <div class="language- extra-class"><pre><code>never类型表示的是那些永不存在的值的类型。
+for exaple: never类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型；
+
+function infiniteLoop(): never {
+    while (ture){
+
+    }
+}
+</code></pre></div><h3 id="_5-void"><a href="#_5-void" class="header-anchor">#</a> 5. Void</h3> <div class="language- extra-class"><pre><code>通常用于函数中设置表示该函数无返回值
+
+function warning(): void{
+    console.log(&quot;warning&quot;)
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/ts/接口.html">
+        接口
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6d8e0d61.js" defer></script><script src="/assets/js/2.9662f95a.js" defer></script><script src="/assets/js/18.5f1f8045.js" defer></script>
+  </body>
+</html>
