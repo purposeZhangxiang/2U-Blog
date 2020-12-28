@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面向切片编程(AOP) | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.c93199af.css" as="style"><link rel="preload" href="/assets/js/app.e183e977.js" as="script"><link rel="preload" href="/assets/js/2.be75aabd.js" as="script"><link rel="preload" href="/assets/js/8.67bc20dc.js" as="script"><link rel="prefetch" href="/assets/js/10.b7fa3b40.js"><link rel="prefetch" href="/assets/js/11.afc5c3aa.js"><link rel="prefetch" href="/assets/js/12.50be8f24.js"><link rel="prefetch" href="/assets/js/13.d3faa0ac.js"><link rel="prefetch" href="/assets/js/14.3f61501b.js"><link rel="prefetch" href="/assets/js/15.72c0e1c2.js"><link rel="prefetch" href="/assets/js/16.5e947d77.js"><link rel="prefetch" href="/assets/js/17.5de4b03f.js"><link rel="prefetch" href="/assets/js/18.5f1f8045.js"><link rel="prefetch" href="/assets/js/19.db11e458.js"><link rel="prefetch" href="/assets/js/3.958d2730.js"><link rel="prefetch" href="/assets/js/4.d2c1605d.js"><link rel="prefetch" href="/assets/js/5.e11a4031.js"><link rel="prefetch" href="/assets/js/6.c67ffdda.js"><link rel="prefetch" href="/assets/js/7.bbd72351.js"><link rel="prefetch" href="/assets/js/9.0dd294b3.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c93199af.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/闭包.html" class="sidebar-link">闭包(Closure)</a></li><li><a href="/js/高阶函数.html" class="sidebar-link">高阶函数(Higher-order Function)</a></li><li><a href="/js/EventLoop.html" class="sidebar-link">事件循环(EventLoop)</a></li><li><a href="/js/AOP.html" aria-current="page" class="active sidebar-link">面向切片编程(AOP)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/AOP.html#_1-丐版方式" class="sidebar-link">1.丐版方式</a></li><li class="sidebar-sub-header"><a href="/js/AOP.html#_2-常规方式" class="sidebar-link">2.常规方式</a></li><li class="sidebar-sub-header"><a href="/js/AOP.html#_3-高逼格方式-装饰器" class="sidebar-link">3 高逼格方式-装饰器</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="面向切片编程-aop"><a href="#面向切片编程-aop" class="header-anchor">#</a> 面向切片编程(AOP)</h1> <h2 id="_1-丐版方式"><a href="#_1-丐版方式" class="header-anchor">#</a> 1.丐版方式</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">after</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">const</span> ctx <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">ctx</span><span class="token punctuation">(</span><span class="token operator">...</span>arguments<span class="token punctuation">)</span>
+        <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">doSomething</span><span class="token punctuation">(</span><span class="token parameter">who</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>who<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">吃个饭</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> nextDo <span class="token operator">=</span> doSomething<span class="token punctuation">.</span><span class="token function">after</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">饭后日常打豆豆</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">nextDo</span><span class="token punctuation">(</span><span class="token string">&quot;2U&quot;</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="_2-常规方式"><a href="#_2-常规方式" class="header-anchor">#</a> 2.常规方式</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token function">playLOL</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'LOL 上号'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">PentaKill</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">person</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>person <span class="token operator">=</span> person
+    <span class="token punctuation">}</span>
+    <span class="token function">win</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>person<span class="token punctuation">.</span><span class="token function">playLOL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'拿个五杀 去吃饭'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> per <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> penta <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PentaKill</span><span class="token punctuation">(</span>per<span class="token punctuation">)</span>
+penta<span class="token punctuation">.</span><span class="token function">win</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_3-高逼格方式-装饰器"><a href="#_3-高逼格方式-装饰器" class="header-anchor">#</a> 3 高逼格方式-装饰器</h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/EventLoop.html" class="prev">
+        事件循环(EventLoop)
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e183e977.js" defer></script><script src="/assets/js/2.be75aabd.js" defer></script><script src="/assets/js/8.67bc20dc.js" defer></script>
+  </body>
+</html>
