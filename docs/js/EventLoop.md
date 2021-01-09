@@ -48,8 +48,15 @@ console.log(7)
     一些异步回调会依次进入macrotask queue处于等待被调用。包括以下(针对浏览器环境)：
     
     - Promise
-    > ES6专门用来解决回调地狱的API。特别说明一下new Promise(fn) 这个fn函数体放异步操作，但是是同步执行的哦。
+    > ES6专门用来解决回调地狱的API。特别说明一下new Promise(fn) 这个fn函数体**放异步操作**，但是是**同步执行**的哦。
     - Object.observe(obj, callback[, acceptList])
     > 废弃的API。原用来监听某个对象的属性改变情况。
     - MutaionObserver
     > 这个是浏览器已经废弃的API。其实就是变动观察器,可以理解成用来观察Node(节点变化的)。前身MotationEvent事件。
+
+## 图解
+
+## 总结
+
+> js为解释性语言，代码依次从上到下执行，遇到回调具体看到底是微任务，还是宏任务。微任务的回调完毕后再去执行宏任务的回调。
+

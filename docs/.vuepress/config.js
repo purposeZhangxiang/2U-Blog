@@ -25,7 +25,7 @@ module.exports = {
       '/ts': ['/ts/数据类型', '/ts/接口', '/ts/类型type和interface'],
       '/react': ['/react/react', 'react/react1'],
       '/LeetCode': [],
-      '/others': ['/others/Nginx静态资源部署', '/others/javasciript迷惑行为']
+      '/others': ['/others/Nginx静态资源部署', '/others/javasciript迷惑行为','/others/Git基本操作','/others/NPM包（发布,更新,删除）']
     }
   },
 };
