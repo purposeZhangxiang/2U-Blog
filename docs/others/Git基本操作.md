@@ -23,4 +23,3 @@ git branch -a //查看所有分支
 
 ## git commit -m
 
-6. 

@@ -1,28 +1,27 @@
 # React启程
 
-
 ## 1.安装
 
 - 环境要求：[Node >= 8.10 和 npm >= 5.6]
 
 - 安装react脚手架：
 
-  ```
+  ```bash
   npm install -g create-react-app
   ```
 
 - 创建react项目
 
-  ```
+  ```bash
   npx create-react-app {项目名称} <js语言>
-  npx create-react-app {项目名称} --typescript <ts语言>
+  npx create-react-app {项目名称} template --typescript <ts语言>
   ```
 
   tips:react项目目录,额,对比vue也属实有些拉跨。。。
 
 - 启动项目
 
-  ```
+  ```bash
   npm start
   ```
 
@@ -32,7 +31,7 @@
 
 1. 类组件
 
-   ```
+   ```tsx
    import React,{Component} from 'react';
    // q1 class Welcome extends Component | class Welcome extends React.Component | class Welcome extends Component 的区别?
    class Welcome extends Component {
@@ -48,7 +47,7 @@
 
 2. 函数式组件（stateless,又叫无状态组件）
 
-   ```
+   ```tsx
    import React from 'react';
    /** 乍一看根本不需要引入import,其实非也,是因为在Babel转译我们的App.js的时候，会把JSX语法糖转换为React.createElement方法。
      * 仔细请阅读http://www.5idf.cn/jishu/59.html
@@ -66,7 +65,7 @@
 
 1. 父传子
 
-   ```
+   ```tsx
    // 若是在父组件应用了以上组件Welcome
    // Father.js
    function Father() {
@@ -86,7 +85,7 @@
 
 2. 字传父
 
-   ```
+   ```tsx
    import React, { Component } from 'react';
    import Son from './Son';
    
@@ -143,7 +142,7 @@
 
    - 2.1 事件绑定
 
-     ```
+     ```tsx
      class BindEvent extends Component {
          render() {
              return (
@@ -168,7 +167,7 @@
 
    - 2.2 事件传参
 
-     ```
+     ```tsx
      class BindEvent extends Component {
          render() {
              return (
@@ -194,35 +193,37 @@
      }
      ```
 
-     
 
-4State  
+## 4.state
 
-```
-class StateTest extends Component {
-	constructor(...props){
-		super(...props)
-		 // 关于q1遗留的问题目前这么写可避免删除线.同时发现在constructor中随意console.log会执行两次,在render方法debugger后发现进入了两次断点.后来去网上查找原因,React在开发环境下会刻意执行两次渲染,以防止组件内有什么side effect引起 bug，提前预防。官方github也作出了声明.
-		//初始化state
-		this.state = { desc:'我是默认值' }
-	}
-    render() {
-        return (
-        	<div>
-        		<span>{this.state.desc}</span>
-           		<button onClick={this.changeDesc}>修改state值</button>
-        	</div>	
-        )
-    }
-    changeDesc = () =>{
-    	this.setState({
-    		desc:'改变成船新值'
-    	})
-    }
-}
-```
+   ```tsx
+   class StateTest extends Component {
+   	constructor(...props){
+   		super(...props)
+   		 // 关于q1遗留的问题目前这么写可避免删除线.同时发现在constructor中随意console.log会执行两次,在render方法debugger后发现进入了两次断点.后来去网上查找原因,React在开发环境下会刻意执行两次渲染,以防止组件内有什么side effect引起 bug，提前预防。官方github也作出了声明.
+   		//初始化state
+   		this.state = { desc:'我是默认值' }
+   	}
+       render() {
+           return (
+           	<div>
+           		<span>{this.state.desc}</span>
+              		<button onClick={this.changeDesc}>修改state值</button>
+           	</div>	
+           )
+       }
+       changeDesc = () =>{
+       	this.setState({
+       		desc:'改变成船新值'
+       	})
+       }
+   }
+   ```
 
-1. 注意的几点
+   注意的几点
+
    - state不要直接更改, this.stat.desc = 'xxx' ,这种方式改了页面也不会刷新的.请使用setState函数.
    - state的值可能是异步更新的.
    - state的更新会被合并.
+
+## 5.ref

@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "vuepress": "^1.8.0",
     "vuepress-plugin-autobar": "github:boboidream/vuepress-bar"
   }
 }
