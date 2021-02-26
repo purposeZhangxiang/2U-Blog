@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>NPM包（发布,更新,删除） | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.4250c2dd.css" as="style"><link rel="preload" href="/assets/js/app.534896fe.js" as="script"><link rel="preload" href="/assets/js/2.6e6b4e56.js" as="script"><link rel="preload" href="/assets/js/16.b91dbbe7.js" as="script"><link rel="prefetch" href="/assets/js/10.967d8404.js"><link rel="prefetch" href="/assets/js/11.88cc0d42.js"><link rel="prefetch" href="/assets/js/12.778ce7ea.js"><link rel="prefetch" href="/assets/js/13.5c758f81.js"><link rel="prefetch" href="/assets/js/14.c2a4cde5.js"><link rel="prefetch" href="/assets/js/15.6708c6ac.js"><link rel="prefetch" href="/assets/js/17.27661abf.js"><link rel="prefetch" href="/assets/js/18.abc72a84.js"><link rel="prefetch" href="/assets/js/19.5cc60bee.js"><link rel="prefetch" href="/assets/js/20.6496018d.js"><link rel="prefetch" href="/assets/js/21.5a68d5b6.js"><link rel="prefetch" href="/assets/js/22.1fc6d3a6.js"><link rel="prefetch" href="/assets/js/23.b10389d2.js"><link rel="prefetch" href="/assets/js/24.e77e638f.js"><link rel="prefetch" href="/assets/js/25.093ba0b8.js"><link rel="prefetch" href="/assets/js/26.2372cace.js"><link rel="prefetch" href="/assets/js/27.52992751.js"><link rel="prefetch" href="/assets/js/28.b85ede29.js"><link rel="prefetch" href="/assets/js/29.9635b833.js"><link rel="prefetch" href="/assets/js/3.4a00d1b8.js"><link rel="prefetch" href="/assets/js/4.ca619b45.js"><link rel="prefetch" href="/assets/js/5.36908570.js"><link rel="prefetch" href="/assets/js/6.6966ad67.js"><link rel="prefetch" href="/assets/js/7.b0c139a2.js"><link rel="prefetch" href="/assets/js/8.31c6d11c.js"><link rel="prefetch" href="/assets/js/9.2d3d3206.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4250c2dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/others/Nginx静态资源部署.html" class="sidebar-link">Nginx静态部署</a></li><li><a href="/others/javasciript迷惑行为.html" class="sidebar-link">JavaScript迷惑行为？</a></li><li><a href="/others/Git基本操作.html" class="sidebar-link">git 基本命操作</a></li><li><a href="/others/NPM包（发布,更新,删除）.html" class="active sidebar-link">NPM包（发布,更新,删除）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/others/NPM包（发布,更新,删除）.html#发布" class="sidebar-link">发布</a></li><li class="sidebar-sub-header"><a href="/others/NPM包（发布,更新,删除）.html#更新" class="sidebar-link">更新</a></li><li class="sidebar-sub-header"><a href="/others/NPM包（发布,更新,删除）.html#删除" class="sidebar-link">删除</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="npm包-发布-更新-删除"><a href="#npm包-发布-更新-删除" class="header-anchor">#</a> NPM包（发布,更新,删除）</h1> <h2 id="发布"><a href="#发布" class="header-anchor">#</a> 发布</h2> <ol><li><p>首先你得有一个npm账号。</p></li> <li><p>切换npm源地址。</p> <div class="language- extra-class"><pre class="language-text"><code>npm config get registry // 先康康你的是否是npm官方的源，不是请切回
+npm config set registry https://registry.npmjs.org
+</code></pre></div></li> <li><p>第一发布用npm adduser (填写你注册的npm账号的username,password,email) 。否则用npm login即可。</p> <div class="language- extra-class"><pre class="language-text"><code>npm whoami // 可以查看当前登录的npm用户
+</code></pre></div></li> <li><p>npm publish(一定要把邮箱给认证了,否则publish会报错的) 稍等片刻就可在 package里面看到自己的的npm包了。</p></li></ol> <h2 id="更新"><a href="#更新" class="header-anchor">#</a> 更新</h2> <p>代码如果有更新,publish的时候需要更改版本号的，否则也提交不到。方式两种如下</p> <ol><li><p>直接改package.json</p></li> <li><p>npm指令操作package.json</p> <div class="language- extra-class"><pre class="language-text"><code>npm version patch  //补丁版本,最后一位数加1 
+npm version minor  //增加了新功能 中间的数字加1
+npm version major //大改动,不向下兼容 第一位数字加1
+</code></pre></div></li></ol> <h2 id="删除"><a href="#删除" class="header-anchor">#</a> 删除</h2> <ol><li><p>操作命令</p> <div class="language- extra-class"><pre class="language-text"><code>npm unpublish [packagename]--force
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/others/Git基本操作.html" class="prev">
+        git 基本命操作
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.534896fe.js" defer></script><script src="/assets/js/2.6e6b4e56.js" defer></script><script src="/assets/js/16.b91dbbe7.js" defer></script>
+  </body>
+</html>

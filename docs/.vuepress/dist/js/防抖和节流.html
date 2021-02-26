@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>防抖（debounce）和节流（throttle） | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.4250c2dd.css" as="style"><link rel="preload" href="/assets/js/app.534896fe.js" as="script"><link rel="preload" href="/assets/js/2.6e6b4e56.js" as="script"><link rel="preload" href="/assets/js/12.778ce7ea.js" as="script"><link rel="prefetch" href="/assets/js/10.967d8404.js"><link rel="prefetch" href="/assets/js/11.88cc0d42.js"><link rel="prefetch" href="/assets/js/13.5c758f81.js"><link rel="prefetch" href="/assets/js/14.c2a4cde5.js"><link rel="prefetch" href="/assets/js/15.6708c6ac.js"><link rel="prefetch" href="/assets/js/16.b91dbbe7.js"><link rel="prefetch" href="/assets/js/17.27661abf.js"><link rel="prefetch" href="/assets/js/18.abc72a84.js"><link rel="prefetch" href="/assets/js/19.5cc60bee.js"><link rel="prefetch" href="/assets/js/20.6496018d.js"><link rel="prefetch" href="/assets/js/21.5a68d5b6.js"><link rel="prefetch" href="/assets/js/22.1fc6d3a6.js"><link rel="prefetch" href="/assets/js/23.b10389d2.js"><link rel="prefetch" href="/assets/js/24.e77e638f.js"><link rel="prefetch" href="/assets/js/25.093ba0b8.js"><link rel="prefetch" href="/assets/js/26.2372cace.js"><link rel="prefetch" href="/assets/js/27.52992751.js"><link rel="prefetch" href="/assets/js/28.b85ede29.js"><link rel="prefetch" href="/assets/js/29.9635b833.js"><link rel="prefetch" href="/assets/js/3.4a00d1b8.js"><link rel="prefetch" href="/assets/js/4.ca619b45.js"><link rel="prefetch" href="/assets/js/5.36908570.js"><link rel="prefetch" href="/assets/js/6.6966ad67.js"><link rel="prefetch" href="/assets/js/7.b0c139a2.js"><link rel="prefetch" href="/assets/js/8.31c6d11c.js"><link rel="prefetch" href="/assets/js/9.2d3d3206.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4250c2dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/闭包.html" class="sidebar-link">闭包(Closure)</a></li><li><a href="/js/高阶函数.html" class="sidebar-link">高阶函数(Higher-order Function)</a></li><li><a href="/js/防抖和节流.html" class="active sidebar-link">防抖（debounce）和节流（throttle）</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/防抖和节流.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/js/防抖和节流.html#手撸一个防抖函数" class="sidebar-link">手撸一个防抖函数</a></li><li class="sidebar-sub-header"><a href="/js/防抖和节流.html#手撸一个节流函数" class="sidebar-link">手撸一个节流函数</a></li></ul></li><li><a href="/js/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/js/EventLoop.html" class="sidebar-link">事件循环(EventLoop)</a></li><li><a href="/js/AOP.html" class="sidebar-link">面向切片编程(AOP)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="防抖-debounce-和节流-throttle"><a href="#防抖-debounce-和节流-throttle" class="header-anchor">#</a> 防抖（debounce）和节流（throttle）</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <blockquote><p>在程序开发中，有些场景会频繁触发函数，为了性能开销，我们并不想这样。于是就到了防抖和节流函数的用武之地了~</p> <p>本质这两个函数也是高阶函数哦。</p></blockquote> <h2 id="手撸一个防抖函数"><a href="#手撸一个防抖函数" class="header-anchor">#</a> 手撸一个防抖函数</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">debounce</span><span class="token punctuation">(</span><span class="token parameter">fn <span class="token punctuation">,</span>delay <span class="token operator">=</span> <span class="token number">2000</span><span class="token punctuation">,</span>immediate <span class="token operator">=</span> <span class="token boolean">false</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> timer <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>immdiate<span class="token punctuation">)</span> <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span> <span class="token function">clearTimeout</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span>
+    
+    timer <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>delay<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="手撸一个节流函数"><a href="#手撸一个节流函数" class="header-anchor">#</a> 手撸一个节流函数</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">throttle</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">,</span> delay <span class="token operator">=</span> <span class="token number">2000</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> st <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> ct <span class="token operator">=</span>  <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>now <span class="token operator">-</span> st <span class="token operator">&gt;=</span> delay<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span>
+      st <span class="token operator">=</span> ct
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/高阶函数.html" class="prev">
+        高阶函数(Higher-order Function)
+      </a></span> <span class="next"><a href="/js/Promise.html">
+        Promise
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.534896fe.js" defer></script><script src="/assets/js/2.6e6b4e56.js" defer></script><script src="/assets/js/12.778ce7ea.js" defer></script>
+  </body>
+</html>

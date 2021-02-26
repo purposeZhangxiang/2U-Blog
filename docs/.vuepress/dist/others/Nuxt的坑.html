@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nuxt踩坑日记 | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.4250c2dd.css" as="style"><link rel="preload" href="/assets/js/app.534896fe.js" as="script"><link rel="preload" href="/assets/js/2.6e6b4e56.js" as="script"><link rel="preload" href="/assets/js/18.abc72a84.js" as="script"><link rel="prefetch" href="/assets/js/10.967d8404.js"><link rel="prefetch" href="/assets/js/11.88cc0d42.js"><link rel="prefetch" href="/assets/js/12.778ce7ea.js"><link rel="prefetch" href="/assets/js/13.5c758f81.js"><link rel="prefetch" href="/assets/js/14.c2a4cde5.js"><link rel="prefetch" href="/assets/js/15.6708c6ac.js"><link rel="prefetch" href="/assets/js/16.b91dbbe7.js"><link rel="prefetch" href="/assets/js/17.27661abf.js"><link rel="prefetch" href="/assets/js/19.5cc60bee.js"><link rel="prefetch" href="/assets/js/20.6496018d.js"><link rel="prefetch" href="/assets/js/21.5a68d5b6.js"><link rel="prefetch" href="/assets/js/22.1fc6d3a6.js"><link rel="prefetch" href="/assets/js/23.b10389d2.js"><link rel="prefetch" href="/assets/js/24.e77e638f.js"><link rel="prefetch" href="/assets/js/25.093ba0b8.js"><link rel="prefetch" href="/assets/js/26.2372cace.js"><link rel="prefetch" href="/assets/js/27.52992751.js"><link rel="prefetch" href="/assets/js/28.b85ede29.js"><link rel="prefetch" href="/assets/js/29.9635b833.js"><link rel="prefetch" href="/assets/js/3.4a00d1b8.js"><link rel="prefetch" href="/assets/js/4.ca619b45.js"><link rel="prefetch" href="/assets/js/5.36908570.js"><link rel="prefetch" href="/assets/js/6.6966ad67.js"><link rel="prefetch" href="/assets/js/7.b0c139a2.js"><link rel="prefetch" href="/assets/js/8.31c6d11c.js"><link rel="prefetch" href="/assets/js/9.2d3d3206.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4250c2dd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/others/Nginx静态资源部署.html" class="sidebar-link">Nginx静态部署</a></li><li><a href="/others/javasciript迷惑行为.html" class="sidebar-link">JavaScript迷惑行为？</a></li><li><a href="/others/Git基本操作.html" class="sidebar-link">git 基本命操作</a></li><li><a href="/others/NPM包（发布,更新,删除）.html" class="sidebar-link">NPM包（发布,更新,删除）</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="nuxt踩坑日记"><a href="#nuxt踩坑日记" class="header-anchor">#</a> Nuxt踩坑日记</h1> <h2 id="插件"><a href="#插件" class="header-anchor">#</a> 插件</h2> <ol><li>插件使用了window对象</li></ol> <p>部署</p> <ol><li>nginx部署后容易挂？</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> -g pm2 <span class="token comment"># 全局在服务器安装pm2进程守护</span>
+pm2 start <span class="token function">npm</span> --<span class="token punctuation">[</span>name<span class="token punctuation">]</span> nuxt -- start <span class="token comment"># name =package.json中的name</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.534896fe.js" defer></script><script src="/assets/js/2.6e6b4e56.js" defer></script><script src="/assets/js/18.abc72a84.js" defer></script>
+  </body>
+</html>
