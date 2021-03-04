@@ -66,3 +66,63 @@ Promise.all([p1,p2,p3]).then(res=>{
    > 顾名思义，Promse.race就是赛跑的意思，意思就是说，Promise.race([p1, p2, p3])里面哪个结果获得的快，就返回那个结果，不管结果本身是成功状态还是失败状态。
    >
    > 使用场景展示未联想到。
+
+## Promise手写源码
+
+  ```js
+//promise基本结构
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('FULFILLED')
+  }, 1000)
+})
+// 总结出Promise是一个构造函数，且参数必须是一个函数
+const isFunc = (fn) = typeof fn === "function";
+
+class MyPromise{
+  constructor(handle){
+    if(!isFunc(handle)) throw new Error("MyPromise must accept a function as a parameter")
+    
+    this._status = 'PENDING';
+    this._value = undefined;
+
+    this._fulfilledQueues = []
+    this._rejectedQueues = []
+    
+    try {
+      handle(this._resolve.bind(this),this._reject.bind(this))
+    }catch(err){
+      this._reject(err)
+    }
+  }
+
+  _resolve(val){
+      if(this._status != "PENDING") return;
+      this._status = "FULFILLED"
+      this._value = err;
+  }
+
+  _reject(err){
+      if(this._status != "PENDING") return;
+      this._status = "REJECTED"
+      this._value = err;
+  }
+
+  then(onFulfilled, onRejected){
+    const {_value,_status,_fulfilledQueues,_rejectedQueues} = this
+    switch(){
+      case 'PENDING':
+        _fulfilledQueues.push(onFulfilled)
+        _rejectedQueues.push(onRejected)
+        break;
+      case 'FULFILLED':
+        onFulfilled(_value)
+        break;
+      case 'REJECTED':
+        onRejected(_value)
+        break;
+    }
+    return new MyPromise(()=>{})
+  }
+}
+  ```
