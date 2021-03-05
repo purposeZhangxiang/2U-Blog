@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>箭头函数和普通函数 | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.fab77d47.css" as="style"><link rel="preload" href="/assets/js/app.b5721275.js" as="script"><link rel="preload" href="/assets/js/2.1c3ebd8e.js" as="script"><link rel="preload" href="/assets/js/8.5187af24.js" as="script"><link rel="prefetch" href="/assets/js/10.7be89556.js"><link rel="prefetch" href="/assets/js/11.48ac823a.js"><link rel="prefetch" href="/assets/js/12.9194a1e5.js"><link rel="prefetch" href="/assets/js/13.2154efe5.js"><link rel="prefetch" href="/assets/js/14.bb7d95f3.js"><link rel="prefetch" href="/assets/js/15.7f7a6fe4.js"><link rel="prefetch" href="/assets/js/16.db4442f9.js"><link rel="prefetch" href="/assets/js/17.f682640b.js"><link rel="prefetch" href="/assets/js/18.84b7643a.js"><link rel="prefetch" href="/assets/js/19.813d8506.js"><link rel="prefetch" href="/assets/js/20.150d3bb9.js"><link rel="prefetch" href="/assets/js/21.7a604a78.js"><link rel="prefetch" href="/assets/js/22.eb4418c0.js"><link rel="prefetch" href="/assets/js/23.94dc8afb.js"><link rel="prefetch" href="/assets/js/24.3512f000.js"><link rel="prefetch" href="/assets/js/25.bc625162.js"><link rel="prefetch" href="/assets/js/26.0b41083b.js"><link rel="prefetch" href="/assets/js/27.3d25b7bd.js"><link rel="prefetch" href="/assets/js/28.35dd26c2.js"><link rel="prefetch" href="/assets/js/29.0bce4cf3.js"><link rel="prefetch" href="/assets/js/3.3f7bfcc3.js"><link rel="prefetch" href="/assets/js/30.8904c26b.js"><link rel="prefetch" href="/assets/js/31.f108ce5c.js"><link rel="prefetch" href="/assets/js/32.916861d0.js"><link rel="prefetch" href="/assets/js/4.dcd29377.js"><link rel="prefetch" href="/assets/js/5.a4f0eedb.js"><link rel="prefetch" href="/assets/js/6.3417ab78.js"><link rel="prefetch" href="/assets/js/7.2810a8de.js"><link rel="prefetch" href="/assets/js/9.7260c178.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fab77d47.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/js中的遍历方法汇总.html" class="sidebar-link">js中的遍历方法汇总</a></li><li><a href="/js/箭头函数和普通函数.html" class="active sidebar-link">箭头函数和普通函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/箭头函数和普通函数.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/js/箭头函数和普通函数.html#区别" class="sidebar-link">区别</a></li><li class="sidebar-sub-header"><a href="/js/箭头函数和普通函数.html#效率" class="sidebar-link">效率</a></li></ul></li><li><a href="/js/闭包.html" class="sidebar-link">闭包(Closure)</a></li><li><a href="/js/高阶函数.html" class="sidebar-link">高阶函数(Higher-order Function)</a></li><li><a href="/js/防抖和节流.html" class="sidebar-link">防抖（debounce）和节流（throttle）</a></li><li><a href="/js/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/js/EventLoop.html" class="sidebar-link">JS执行机制-事件循环(EventLoop)</a></li><li><a href="/js/AOP.html" class="sidebar-link">面向切片编程(AOP)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="箭头函数和普通函数"><a href="#箭头函数和普通函数" class="header-anchor">#</a> 箭头函数和普通函数</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <blockquote><p>在日常开发中，箭头函数的使用率已经很高了。这里深入研究一下，箭头函数和普通函数的区别以及执行效率。</p></blockquote> <h2 id="区别"><a href="#区别" class="header-anchor">#</a> 区别</h2> <table><thead><tr><th style="text-align:center;"></th> <th style="text-align:center;">箭头函数</th> <th style="text-align:center;">普通函数</th></tr></thead> <tbody><tr><td style="text-align:center;">是否有argument(实参列表)</td> <td style="text-align:center;">否</td> <td style="text-align:center;">是</td></tr> <tr><td style="text-align:center;">是否能做构造函数(能否使用new)</td> <td style="text-align:center;">否</td> <td style="text-align:center;">是</td></tr> <tr><td style="text-align:center;">执行上下文能否被更改</td> <td style="text-align:center;">否</td> <td style="text-align:center;">是</td></tr></tbody></table> <p>箭头函数的this永远和父作用域的this保持一致，普通函数可以使用<strong>call,apply,bind</strong>修改this的指向。</p> <h2 id="效率"><a href="#效率" class="header-anchor">#</a> 效率</h2> <img src="/assets/img/执行效率.da8a2197.png"></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/js中的遍历方法汇总.html" class="prev">
+        js中的遍历方法汇总
+      </a></span> <span class="next"><a href="/js/闭包.html">
+        闭包(Closure)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b5721275.js" defer></script><script src="/assets/js/2.1c3ebd8e.js" defer></script><script src="/assets/js/8.5187af24.js" defer></script>
+  </body>
+</html>

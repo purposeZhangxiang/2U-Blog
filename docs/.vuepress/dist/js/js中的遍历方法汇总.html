@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js中的遍历方法汇总 | 2U&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/logo.jpg">
+    <meta name="description" content="2U blog ">
+    
+    <link rel="preload" href="/assets/css/0.styles.fab77d47.css" as="style"><link rel="preload" href="/assets/js/app.b5721275.js" as="script"><link rel="preload" href="/assets/js/2.1c3ebd8e.js" as="script"><link rel="preload" href="/assets/js/13.2154efe5.js" as="script"><link rel="prefetch" href="/assets/js/10.7be89556.js"><link rel="prefetch" href="/assets/js/11.48ac823a.js"><link rel="prefetch" href="/assets/js/12.9194a1e5.js"><link rel="prefetch" href="/assets/js/14.bb7d95f3.js"><link rel="prefetch" href="/assets/js/15.7f7a6fe4.js"><link rel="prefetch" href="/assets/js/16.db4442f9.js"><link rel="prefetch" href="/assets/js/17.f682640b.js"><link rel="prefetch" href="/assets/js/18.84b7643a.js"><link rel="prefetch" href="/assets/js/19.813d8506.js"><link rel="prefetch" href="/assets/js/20.150d3bb9.js"><link rel="prefetch" href="/assets/js/21.7a604a78.js"><link rel="prefetch" href="/assets/js/22.eb4418c0.js"><link rel="prefetch" href="/assets/js/23.94dc8afb.js"><link rel="prefetch" href="/assets/js/24.3512f000.js"><link rel="prefetch" href="/assets/js/25.bc625162.js"><link rel="prefetch" href="/assets/js/26.0b41083b.js"><link rel="prefetch" href="/assets/js/27.3d25b7bd.js"><link rel="prefetch" href="/assets/js/28.35dd26c2.js"><link rel="prefetch" href="/assets/js/29.0bce4cf3.js"><link rel="prefetch" href="/assets/js/3.3f7bfcc3.js"><link rel="prefetch" href="/assets/js/30.8904c26b.js"><link rel="prefetch" href="/assets/js/31.f108ce5c.js"><link rel="prefetch" href="/assets/js/32.916861d0.js"><link rel="prefetch" href="/assets/js/4.dcd29377.js"><link rel="prefetch" href="/assets/js/5.a4f0eedb.js"><link rel="prefetch" href="/assets/js/6.3417ab78.js"><link rel="prefetch" href="/assets/js/7.2810a8de.js"><link rel="prefetch" href="/assets/js/8.5187af24.js"><link rel="prefetch" href="/assets/js/9.7260c178.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.fab77d47.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">2U's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/js/闭包.html" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/ts/数据类型.html" class="nav-link">
+  TypeScript
+</a></div><div class="nav-item"><a href="/react/react.html" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/leetcode/one.html" class="nav-link">
+  LeetCode
+</a></div><div class="nav-item"><a href="/others/Nginx静态资源部署.html" class="nav-link">
+  Other
+</a></div><div class="nav-item"><a href="/" class="nav-link">
+  About Me
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/js中的遍历方法汇总.html" class="active sidebar-link">js中的遍历方法汇总</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#for" class="sidebar-link">for</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#for-in" class="sidebar-link">for in</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#for-of" class="sidebar-link">for of</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#foreach" class="sidebar-link">forEach</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#map" class="sidebar-link">map</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#filter" class="sidebar-link">filter</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#every" class="sidebar-link">every</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#some" class="sidebar-link">some</a></li><li class="sidebar-sub-header"><a href="/js/js中的遍历方法汇总.html#reduce" class="sidebar-link">reduce</a></li></ul></li><li><a href="/js/箭头函数和普通函数.html" class="sidebar-link">箭头函数和普通函数</a></li><li><a href="/js/闭包.html" class="sidebar-link">闭包(Closure)</a></li><li><a href="/js/高阶函数.html" class="sidebar-link">高阶函数(Higher-order Function)</a></li><li><a href="/js/防抖和节流.html" class="sidebar-link">防抖（debounce）和节流（throttle）</a></li><li><a href="/js/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/js/EventLoop.html" class="sidebar-link">JS执行机制-事件循环(EventLoop)</a></li><li><a href="/js/AOP.html" class="sidebar-link">面向切片编程(AOP)</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="js中的遍历方法汇总"><a href="#js中的遍历方法汇总" class="header-anchor">#</a> js中的遍历方法汇总</h1> <h2 id="for"><a href="#for" class="header-anchor">#</a> for</h2> <blockquote><p>有 continue break 无 return</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="for-in"><a href="#for-in" class="header-anchor">#</a> for in</h2> <blockquote><p>有contine break   无 return</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token operator">:</span><span class="token string">'zx'</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token string">'24'</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">in</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// i为数组索引下标</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token keyword">in</span> obj<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// i为对象的键</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="for-of"><a href="#for-of" class="header-anchor">#</a> for of</h2> <blockquote><p>有coutine break 无 return</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> name<span class="token operator">:</span><span class="token string">'zx'</span><span class="token punctuation">,</span>age<span class="token operator">:</span><span class="token string">'24'</span> <span class="token punctuation">}</span>
+
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> val <span class="token keyword">of</span> arr<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// val为数组中的元素</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 遍历对象是 对象必须有iterator</span>
+</code></pre></div><h2 id="foreach"><a href="#foreach" class="header-anchor">#</a> forEach</h2> <blockquote><p>无continue break return</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+
+arr<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span>index<span class="token punctuation">,</span>_arr</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+  <span class="token comment">// item  数组元素</span>
+  <span class="token comment">// index 数组索引</span>
+  <span class="token comment">// _arr  原数组</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="map"><a href="#map" class="header-anchor">#</a> map</h2> <blockquote><p>返回一个新数组</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>
+</code></pre></div><h2 id="filter"><a href="#filter" class="header-anchor">#</a> filter</h2> <blockquote><p>返回一个新数组</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h2 id="every"><a href="#every" class="header-anchor">#</a> every</h2> <blockquote><p>返回一个布尔值</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h2 id="some"><a href="#some" class="header-anchor">#</a> some</h2> <blockquote><p>返回一个布尔值</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div><h2 id="reduce"><a href="#reduce" class="header-anchor">#</a> reduce</h2> <blockquote><p>返回运算的结果</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/js/箭头函数和普通函数.html">
+        箭头函数和普通函数
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b5721275.js" defer></script><script src="/assets/js/2.1c3ebd8e.js" defer></script><script src="/assets/js/13.2154efe5.js" defer></script>
+  </body>
+</html>
